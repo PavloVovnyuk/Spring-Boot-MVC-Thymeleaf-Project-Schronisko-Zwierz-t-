@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1>Shronisko Reksio i Klakier</h1>
+<h2>Zwierzaki szukające domu</h2>
+<a href="/addAnimal">dodaj zwieżaka</a><br>
+<a>Kategorie : </a>
+<a href="/categoryDog">Psy</a>
+<a href="/categoryKoty">Koty</a>
+<a href="/categoryAll">Wszystkie</a>
+<a href="/categoryAnother">Inne</a>
+<table>
+    <li style="list-style-type:none;" th:each="animal: ${allAnimals}">
+        <tr>
+            <td> <a th:href="@{opis+${animal.name}}"><img th:src="${animal.imgUrl}" alt="" class="rounded-pill" /></a>
+            </td>
+
+            <td> <a th:href="@{opis+${animal.name}}"> <span th:text="${animal.name}"></span></a></td>
+
+            <td style="padding-top: 50px"><a th:href="@{opis+${animal.name}}"><span th:text="${animal.description}"></span></a></td>
+        </tr>
+    </li>
+</table>
+</body>
+</html>

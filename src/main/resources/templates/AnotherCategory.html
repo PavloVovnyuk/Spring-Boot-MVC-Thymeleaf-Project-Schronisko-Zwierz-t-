@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <li style="list-style-type:none;" th:each="AnotherCateg: ${inneCategoryList}">
+        <tr>
+            <td><img th:src="${AnotherCateg.imgUrl}" alt="" class="rounded-pill"/></td>
+        </tr>
+        <tr>
+            <td>Imie - -<span th:text="${AnotherCateg.name}"></span></td>
+        </tr>
+        <tr>
+            <td> Opis:<span th:text="${AnotherCateg.description}"></span></td>
+        </tr>
+        <tr>
+            <td>Kategoria :<span th:text="${AnotherCateg.category}"> </span></td>
+        </tr>
+    </li>
+</table>
+</body>
+</html>

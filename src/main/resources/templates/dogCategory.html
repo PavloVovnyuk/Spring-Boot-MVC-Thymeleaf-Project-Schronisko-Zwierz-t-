@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <h3>Psy szukające domu</h3>
+    <ul>
+        <li style="list-style-type:none;" th:each="dogs: ${dogList}">
+            <tr>
+                <td><img th:src="${dogs.imgUrl}" alt="" class="rounded-pill"/></td>
+            </tr>
+            <tr>
+                <td>Imie Psa -<span th:text="${dogs.name}"></span></td>
+            </tr>
+            <tr>
+                <td> Opis:<span th:text="${dogs.description}"></span></td>
+            </tr>
+            <tr>
+                <td>Kategoria :<span th:text="${dogs.category}"> </span></td>
+            </tr>
+        </li>
+    </ul>
+</table>
+
+</body>
+</html>

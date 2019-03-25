@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Shronisko Reksio i Klakier</h1>
+
+<a href="/"> powrot do listy </a><br>
+<a href="/addAnimal"> eedytuj dane </a>
+
+<h1 th:text="${animalAzor.name}"></h1>
+<p th:text="${animalAzor.description}"> </p>
+
+    <p>Pies nazywa się Azor. Jest to duży pies rasy nowofunlad, który jest
+    samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.
+    Borys lubi spacery a także jeśli rzuca mu się patyk. Jego ulubione miejsce do hasania to las na granicy Popielowa i
+    Jankowic. Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie
+    piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę. Jest moim
+    wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer. Gdy jest
+    ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.
+    Moim zdaniem warto zawsze mieć u boku takiego przyjaciela. Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem
+    zabaw. </p>
+
+</body>
+</html>

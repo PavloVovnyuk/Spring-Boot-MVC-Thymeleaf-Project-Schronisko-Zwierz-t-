@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <h3>Psy szukające domu</h3>
+    <a href="/addAnimal"> edytuj dane </a>
+    <tr>
+        <td><img th:src="${animal.imgUrl}" alt="" class="rounded-pill"/></td>
+    </tr>
+    <tr>
+        <td>Imie Zwierzaka -<span th:text="${animal.name}"></span></td>
+    </tr>
+    <tr>
+        <td> Opis:<span th:text="${animal.description}"><p>Mam malutkiego kundelka, ktÓry wabi się Reks. Reks jest bardzo milutkim,młodym pieskiem. <br>Bardzo lubi towarzystwo dzieci. Ma bardzo duże brązowe oczka, malutki ogonek i jest cały rudy. Jego łapki sa mięciutke jak poduszeczki. <br>Swoim rÓżowym języczkiem zawsze łaskocze liżąc mnie po nogach. Reksio umie wiele sztuczek. Potrafi skakać przez skakankę!<br> Nie każdy kundel to potrafi zrobic, dlatego mÓj Reks jest naprawde wyjątkowy.<br> Kiedy kończę zajęcia szkolne Reksio zawsze czeka na mnie na podwÓrku i gdy tylko mnie zobaczy zaczyna do mnie biec i szczekać.<br> Nie zamieniłabym mojego małego kundelka na innego psa! Reks jest moim małym, włochatym przyjacielem.</p></span>
+        </td>
+    </tr>
+    <tr>
+        <td>Kategoria :<span th:text="${animal.category}"> </span></td>
+    </tr>
+</table>
+</body>
+</html>
